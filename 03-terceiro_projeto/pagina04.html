@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto CSS3 - divs e spans</title>
+
+    <style type="text/css">
+
+        #topo {
+            background: blue;
+        }
+
+        #conteudo {
+            background: red;
+        }
+
+        #rodape {
+            background: green;
+        }
+
+        .produto {
+            background: grey;
+            margin: 10px;
+        }
+
+        .azul {
+            color: blue;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- DIVS são elementos do tipo BLOCK. Elementos do tipo BLOCK, por padrão, ocupam toda a largura da tela. É como se tivessem largura 100%. 
+    Paragrafos também são elementos de bloco. -->
+    <!-- SPANS são elementos do tipo INLINE. Elementos do tipo INLINE, por padrão, posicionam os elementos na mesma linha, um ao lado do outro. -->
+    <div id="topo">
+        <img src="https://img.ibxk.com.br/2013/1/materias/3543218144857.jpg?w=1120&h=420&mode=crop&scale=both" alt="" width="200">
+        <ul>
+            <li>Home</li>
+            <li>Produtos</li>
+            <li>Contato</li>
+        </ul>
+    </div>
+    <div id="conteudo">
+        <div class="produto">
+            Produto 1
+        </div>
+        <div class="produto">
+            Produto 2
+        </div>
+        <div class="produto">
+            Produto 3
+        </div>
+    </div>
+    <div id="rodape">
+        <!-- Nesse caso, devemos usar a span pois a div quebraria a linha. -->
+        Todos os <span class="azul">direitos</span> reservados
+    </div>
+
+    <span>
+        Span 1
+    </span>
+    <span>
+        Span 2
+    </span>
+    <span>
+        Span 3
+    </span>
+
+</body>
+</html>
