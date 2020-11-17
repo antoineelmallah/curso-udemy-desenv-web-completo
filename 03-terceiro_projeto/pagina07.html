@@ -17,13 +17,14 @@
             px -> tamanho fixo. O tamanho de texto padrão é 16px. 
             % -> tamanho relativo ao tamanho padrão do texto (16px). (Não é muito usado pra texto).
             Ex.: 200% = 32px, por exemplo. 
-            em -> tamanho relativo ao container pai (mais usado para tamanhos relativos).
+            em -> tamanho relativo ao container pai (mais usado para tamanhos relativos). A proporção do 
+            tamanho de texto entre os filhos é mantida.
             */
             font-size: 1em;
         }
 
         .texto2 {
-            font-size: 15px;
+            font-size: 2em;
         }
 
     </style>
@@ -34,9 +35,11 @@
     <!-- O font-size da div é 60px. Dessa forma, 1em, dentro da div é 60px. Fora é o padrão (16px). -->
     <div>
         <p class="texto">Conteúdo dentro da div. classe texto</p>
-        <!-- Como a classe 'texto2' define valor para o font-size, ele sobrescreve o do pai. -->
+        <!-- Como a classe 'texto2' define valor para o font-size, ele sobrescreve o do pai. O tamanho
+        será 2x o definido para o pai, ou seja 2em =  2 x 60px = 120px -->
         <p class="texto2">Conteúdo dentro da div. classe texto2</p>
     </div>
+    
     <p class="texto">Conteúdo fora da div</p>
 
 </body>
