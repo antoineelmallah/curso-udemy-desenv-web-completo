@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto CSS3 - fontes e cores</title>
+
+    <style type="text/css">
+
+        div {
+            font-size: 60px;
+            border: 5px solid red;
+        }
+
+        .texto {
+            /*
+            px -> tamanho fixo. O tamanho de texto padrão é 16px. 
+            % -> tamanho relativo ao tamanho padrão do texto (16px). (Não é muito usado pra texto).
+            Ex.: 200% = 32px, por exemplo. 
+            em -> tamanho relativo ao container pai (mais usado para tamanhos relativos).
+            */
+            font-size: 1em;
+        }
+
+        .texto2 {
+            font-size: 15px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- O font-size da div é 60px. Dessa forma, 1em, dentro da div é 60px. Fora é o padrão (16px). -->
+    <div>
+        <p class="texto">Conteúdo dentro da div. classe texto</p>
+        <!-- Como a classe 'texto2' define valor para o font-size, ele sobrescreve o do pai. -->
+        <p class="texto2">Conteúdo dentro da div. classe texto2</p>
+    </div>
+    <p class="texto">Conteúdo fora da div</p>
+
+</body>
+</html>
