@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto CSS3 - cor e imagem de fundo</title>
+
+    <style type="text/css">
+
+        body {
+            /*Por padrão, o background-image repete a imagem indefinidamente para o lado e para baixo.*/
+            background-image: url('../imagens/alfaromeo.jpg');
+
+            /* A propriedade background-repeat é usada para controlar a repetição da imagem do background */
+            background-repeat: no-repeat; /* não repete */
+
+            /*propriedade backgrouns-attachment: 
+            - 'fixed': a imagem do background não move
+            com o scroll.
+            - 'scroll': acompanha o scroll.
+            */
+            background-attachment: fixed;
+
+            /*A propriedade background-position define uma posição para a imagem do background dentro do 
+            elemento pai. 
+            Se definirmos apenas um valor para essa propriedade (Ex: background-position: center;), o valor 
+            é aplicado para os eixos x e y. 
+            Podemos especificar valores diferentes dara os eixos (horizontal vertical). 
+            (Ex: background-position: left center;). */
+            background-position: left top;
+        }
+
+        /* A imagem pode ser aplicada no backgrouns de outros elementos. */
+        h1 {
+            background-image: url('../imagens/alfaromeo.jpg');
+            background-repeat: repeat-x;
+        }
+
+        /* Com a propriedade background, podemos definir a imagem e a cor do fundo do background simultaneamente. */
+        .fundo {
+            /* A propriedade background recebe os valores seguidos de espaço. */
+            background: royalblue url('../imagens/arvore.png') no-repeat fixed left top;
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Conteúdo de título 1</h1>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias natus quidem adipisci optio eos dignissimos nemo, nesciunt voluptatem a aliquam corporis aliquid ad atque magni mollitia, cum fugit eaque? Est?</p>
+
+    <div class="fundo">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sint qui ea non modi autem, quia vero molestias quidem saepe magni asperiores beatae ad at aspernatur nulla porro in rem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque aspernatur sequi iste nulla ipsam at adipisci soluta, dolorum eos sit eius, perspiciatis cumque illo minima, temporibus ex cum? A, officia?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sint qui ea non modi autem, quia vero molestias quidem saepe magni asperiores beatae ad at aspernatur nulla porro in rem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque aspernatur sequi iste nulla ipsam at adipisci soluta, dolorum eos sit eius, perspiciatis cumque illo minima, temporibus ex cum? A, officia?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sint qui ea non modi autem, quia vero molestias quidem saepe magni asperiores beatae ad at aspernatur nulla porro in rem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque aspernatur sequi iste nulla ipsam at adipisci soluta, dolorum eos sit eius, perspiciatis cumque illo minima, temporibus ex cum? A, officia?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sint qui ea non modi autem, quia vero molestias quidem saepe magni asperiores beatae ad at aspernatur nulla porro in rem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque aspernatur sequi iste nulla ipsam at adipisci soluta, dolorum eos sit eius, perspiciatis cumque illo minima, temporibus ex cum? A, officia?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sint qui ea non modi autem, quia vero molestias quidem saepe magni asperiores beatae ad at aspernatur nulla porro in rem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque aspernatur sequi iste nulla ipsam at adipisci soluta, dolorum eos sit eius, perspiciatis cumque illo minima, temporibus ex cum? A, officia?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sint qui ea non modi autem, quia vero molestias quidem saepe magni asperiores beatae ad at aspernatur nulla porro in rem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque aspernatur sequi iste nulla ipsam at adipisci soluta, dolorum eos sit eius, perspiciatis cumque illo minima, temporibus ex cum? A, officia?</p>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi iste vitae eius quis nemo aliquam quia ab voluptas eos ratione recusandae deleniti, atque minima error cumque voluptate nam eum quidem?</p>
+
+</body>
+</html>
