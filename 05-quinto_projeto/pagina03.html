@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos flutuantes</title>
+    <style type="text/css">
+
+        /* Se, por exemplo, houverem 10 elementos flutuantes à esquerda e todos tiverem o mesmo tamanho,
+        com excessão do mais à esquerda de todos que seria mais alto, ao quebrar a linha, os elementos 
+        excedentes não ficariam colados à extremidade esquerda da tela. Eles ficariam limitados pelo elemento
+        de maior altura. Diminua a tela e veja o comportamento dos blocos azuis quando quebram a linha. */
+
+        /* Se, abaixo de elementos flutuantes, adicionarmos algum texto, esse fica disposto ao redor dos 
+        elementos flutuantes. Para alterar esse comportamento e fazer com que o texto seja disposto abaixo
+        dos elementos flutuantes, devemos aplicar ao paragrafo a propriedade 'clear'.
+        Se os elementos estiverem flutuando à esquerda, temos que adicionar a propriedade com valor 
+        "clear: left;" para alterar o comportamento do texto. Para textos flutuando à direita, temos que 
+        usar o valor "right" para a propriedade clear. Podemos usar também o valor both para ambos os casos. */
+
+        /* Uma div, não flutuante, ficaria disposta atras dos elementos flutuantes, por
+        estar em outro fluxo de criação de elementos da página.
+        Uma div flutuante que contenha outras divs flutuantes não irá expandir devido aos elementos internos
+        a não ser que coloquemos a propriedade "clear" no último elemento contido nela. */
+
+        .flutuante {
+            border: 1px solid gray;
+            float: left;
+            margin: 10px; /* Podemos adicionar margin para separar os elementos flutuantes. */
+        }
+
+        .tamanho-normal {
+            background: blue;
+            width: 150px;
+            height: 150px;
+        }
+
+        .mais-alto {
+            background: red;
+            width: 150px;
+            height: 200px;
+        }
+
+        .clear {
+            /* left, right, both, none */
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="flutuante mais-alto">Flutuante 1</div>
+    <div class="flutuante tamanho-normal">Flutuante 2</div>
+    <div class="flutuante tamanho-normal">Flutuante 3</div>
+    <div class="flutuante tamanho-normal">Flutuante 4</div>
+    <div class="flutuante tamanho-normal">Flutuante 5</div>
+    <div class="flutuante tamanho-normal">Flutuante 6</div>
+    <div class="flutuante tamanho-normal">Flutuante 7</div>
+    <div class="flutuante tamanho-normal">Flutuante 8</div>
+    <div class="flutuante tamanho-normal">Flutuante 9</div>
+    <div class="flutuante tamanho-normal">Flutuante 10</div>
+    <div class="flutuante mais-alto">Flutuante 11</div>
+    <div class="flutuante tamanho-normal">Flutuante 12</div>
+    <div class="flutuante tamanho-normal">Flutuante 13</div>
+    <div class="flutuante tamanho-normal">Flutuante 14</div>
+    <div class="flutuante tamanho-normal">Flutuante 15</div>
+    <div class="flutuante tamanho-normal">Flutuante 16</div>
+    <div class="flutuante tamanho-normal">Flutuante 17</div>
+    <div class="flutuante tamanho-normal">Flutuante 18</div>
+    <div class="flutuante tamanho-normal">Flutuante 19</div>
+    <div class="flutuante tamanho-normal">Flutuante 20</div>
+    <div class="flutuante tamanho-normal">Flutuante 21</div>
+    <div class="flutuante tamanho-normal">Flutuante 22</div>
+    <div class="flutuante tamanho-normal">Flutuante 23</div>
+    <div class="flutuante tamanho-normal">Flutuante 24</div>
+    <div class="flutuante tamanho-normal">Flutuante 25</div>
+    <div class="flutuante tamanho-normal">Flutuante 26</div>
+    <div class="flutuante tamanho-normal">Flutuante 27</div>
+    <div class="flutuante tamanho-normal">Flutuante 28</div>
+    <div class="flutuante tamanho-normal">Flutuante 29</div>
+
+    <p class="clear">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus ducimus sequi, voluptatum iste sint nemo! Magni facere est enim fugiat animi ea eligendi aspernatur, recusandae debitis quisquam, reprehenderit culpa repellendus?</p>
+
+</body>
+</html>
