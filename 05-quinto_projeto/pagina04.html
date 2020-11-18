@@ -9,8 +9,9 @@
         /* Uma div, não flutuante, ficaria disposta atras dos elementos flutuantes, por
         estar em outro fluxo de criação de elementos da página.
         Uma div não flutuante que contenha outras divs flutuantes não irá expandir devido aos elementos internos
-        a não ser que coloquemos uma nova div abaixo do último elemento interno com a propriedade "clear". Outra
-        forma de evitar esse efeito é fazermos a div externa ser flutuante também. 
+        a não ser que coloquemos uma nova div vazia abaixo do último elemento interno com a propriedade "clear". O
+        mesmo funciona com um paragrafo. 
+        Outra forma de evitar esse efeito é fazermos a div externa ser flutuante também. 
         Se os elementos internos não forem flutuantes, esse problema não acontece.
         A propriedade "clear" limpa o fluxo flutuante e assim permite que o conteúdo da div externa possa 
         expandir*/
@@ -43,7 +44,8 @@
         <div class="flutuante">Flutuante 3</div>
         <div class="flutuante">Flutuante 4</div>
         <div class="flutuante">Flutuante 5</div>
-        <div class="clear"></div>
+        <!--div class="clear"></div-->
+        <p class="clear">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sed quos amet dolorem reprehenderit doloribus ea harum dolores cupiditate iure maiores illum odit nostrum doloremque, autem cum. Vel, deleniti laudantium!</p>
     </div>
 
 </body>
