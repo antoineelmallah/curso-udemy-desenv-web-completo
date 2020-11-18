@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamento estático e relativo</title>
+    <style type="text/css">
+
+        body {
+            background: #007fc7;
+        }
+
+        h1 {
+            /* position: static; */
+        }
+
+        p {
+            /* position: static; */
+            width: 300px;
+        }
+
+        /* Podemos centralizar horizontalmente usando margin: auto. Nesse caso, será colocada margem 
+        igual dos dois lados do elemento. */
+        #container {
+            background: #fff;
+            width: 800px;
+            margin: 5px auto;
+            padding: 10px;
+        }
+
+        /* A propriedade "position: relative" deve ser usada junto com propriedades de deslocamento 
+        (top, right, botton e left) para movimentar o elemento. As propriedades de deslocamento podem
+        receber valores positivos e negativos. 
+        O elemento será deslocado relativamente à sua posição anterior. */
+        .relative {
+            border: 1px solid red;
+            position: relative;
+            top: 20px;
+            left: 80px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--
+        O "fluxo padrão" de um documento é a característica default de disposição dos elementos na tela
+        de acordo com sua ordem de declaração no código.
+        O fluxo padrão de elementos do tipo bloco é de um ser disposto abaixo do outro.
+        O fluxo padrão de elementos do tipo inline é de um ser disposto ao lado do outro.
+    -->
+
+    <!--
+        O posicionamento padrão dos elementos é "static".
+    -->
+
+    <div id="container">
+        <h1>Posicionamentos</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci alias necessitatibus accusamus? Ab, animi provident, possimus aperiam natus porro iusto tempora, architecto doloribus neque omnis rerum ipsa dolores culpa sint.</p>
+        <p class="relative">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi voluptates voluptate laboriosam aut distinctio delectus et velit nostrum veritatis veniam libero, dolorem earum pariatur labore? Praesentium accusantium tempora perspiciatis similique.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+    </div>
+
+</body>
+</html>
