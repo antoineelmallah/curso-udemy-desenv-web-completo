@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos flutuantes</title>
+    <style type="text/css">
+
+        /* Uma div, não flutuante, ficaria disposta atras dos elementos flutuantes, por
+        estar em outro fluxo de criação de elementos da página.
+        Uma div não flutuante que contenha outras divs flutuantes não irá expandir devido aos elementos internos
+        a não ser que coloquemos uma nova div abaixo do último elemento interno com a propriedade "clear". Outra
+        forma de evitar esse efeito é fazermos a div externa ser flutuante também. 
+        Se os elementos internos não forem flutuantes, esse problema não acontece.
+        A propriedade "clear" limpa o fluxo flutuante e assim permite que o conteúdo da div externa possa 
+        expandir*/
+
+        #principal {
+            border: 3px solid red;
+            background: green;
+        }
+
+        .flutuante {
+            border: 1px solid gray;
+            float: left;
+            width: 150px;
+            height: 150px;
+            background: blue;
+        }
+
+        .clear {
+            /* left, right, both, none */
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="principal">
+        <div class="flutuante">Flutuante 1</div>
+        <div class="flutuante">Flutuante 2</div>
+        <div class="flutuante">Flutuante 3</div>
+        <div class="flutuante">Flutuante 4</div>
+        <div class="flutuante">Flutuante 5</div>
+        <div class="clear"></div>
+    </div>
+
+</body>
+</html>
