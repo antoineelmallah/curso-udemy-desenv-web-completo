@@ -1,0 +1,40 @@
+/*O padding é um espaçamento feito entre o conteúdo e os limites da "caixa" que define os limites do 
+elemento. A margin é um espaçamento na parte externa da caixa.*/
+
+/*O padding é adicionado ao tamanho total da caixa. Dessa forma, em uma div com 150px de largura e 
+padding-right de 20px, o tamanho total da div será 170px. */
+
+/*Se paddings de elementos diferentes estiverem separando esses 2 elementos, a distância entre os
+elementos NÃO será a soma dos valores de padding. Será o maior valor de padding dos 2 elementos. Isso
+é chamado "margin colapse".
+Ex: Considere os dois elementos vizinhos: 
+1) elemento à esquerda com padding-right igual a 20px.
+2) elemento à direita com padding-left igual a 10px.
+Nesse caso, a distância entre os elementos vizinhos será de 20px.
+*/
+
+/*Formas de informar o padding (analogo para margin):
+
+1)
+padding-top: 10px;
+padding-right: 15px;
+padding-botton: 20px;
+padding-left: 25px;
+
+2)
+padding: 10px 15px 20px 25px;
+
+3) Nesse caso, o padding-top e padding-botton serão iguais a 10px e o padding-left e padding-right 
+serão iguais a 20px.
+padding: 10px 20px;
+
+4) Nesse caso, todos os valores de padding serão iguais a 20px.
+padding: 20px;
+
+*/
+.conteudo {
+    border: 1px solid red;
+    padding: 20px;
+    margin: 30px;
+    width: 150px;
+}
