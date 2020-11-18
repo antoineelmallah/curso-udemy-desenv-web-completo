@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de elemento: block, inline, inline-block</title>
+    <style type="text/css">
+
+        .borda {
+            border: 1px solid red;
+            /* display: inline; */ /* Altera o comportamento elemento para inline */
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 
+        Os elementos html possuem os tipos inline, block e um tipo hibrido inline-block. 
+        Podemos alterar o comportamento de um elemento usando a propriedade "display".
+        
+        Comportamento padrão:
+    
+        1) block: 
+            - possuem uma largura que ocupa todo o espaçamento da tela. 
+            - dispostos um abaixo do outro.
+            - Ex.: <h1>, <p> e <table>.
+
+        2) inline:
+            - largura depende do conteúdo do elemento.
+            - dispostos um ao lado do outro.
+            - Ex.: <link>, <span>, <img>.
+
+        3) inline-block:
+            - largura depende do conteúdo do elemento.
+            - dispostos um ao lado do outro se a largura dos elementos for menor que a largura da tela e
+            um abaixo do outro se maior.
+            - podemos alterar o comportamento para "inline-block" usando a propriedade display: inline-block.
+
+    -->
+
+    <!-- Elementos do tipo block -->
+    <h1 class="borda">h1 1</h1>
+    <h1 class="borda">h1 2</h1>
+
+    <!-- Elementos do tipo inline -->
+    <span class="borda">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora cum, saepe sit debitis aperiam qui odio praesentium expedita accusantium nobis unde iste, exercitationem illum ipsam dolore ex cupiditate mollitia magni. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora cum, saepe sit debitis aperiam qui odio praesentium expedita accusantium nobis unde iste, exercitationem illum ipsam dolore ex cupiditate mollitia magni.</span>
+    <span class="borda">span 2</span>
+    <span class="borda">span 2</span>
+    <span class="borda">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora cum, saepe sit debitis aperiam qui odio praesentium expedita accusantium nobis unde iste, exercitationem illum ipsam dolore ex cupiditate mollitia magni. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora cum, saepe sit debitis aperiam qui odio praesentium expedita accusantium nobis unde iste, exercitationem illum ipsam dolore ex cupiditate mollitia magni.</span>
+    <span class="borda">span 2</span>
+</body>
+</html>
