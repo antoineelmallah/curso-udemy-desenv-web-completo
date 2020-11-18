@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de links</title>
+    <style type="text/css">
+
+        /*
+        Os links, diferente de outros elementos, possuem estados. 
+        IMPORTANTE: devemos declarar a formatação dos estados dos links na ordem abaixo.
+
+        Podemos separar os seletores por vírgula se a formatação dos estados forem os mesmos.
+        Ex.:
+        a:link, a:visited {
+            color: #b9c941;
+        }
+
+        */
+        body {
+            background: gray;
+        }
+        
+        a {
+            padding: 5px 10px;
+            text-decoration: none;
+        }
+
+        /* estado: não visitado (padrão) */
+        a:link {
+            color: #b9c941;
+        }
+
+        /* estado: não visitado */
+        a:visited {
+            color: #c0c0c0;
+        }
+
+        /* estado: hover (com o ponteiro do mouse em cima do link) */
+        a:hover {
+            color: #fff;
+            background: #6d790f;
+        }
+
+        /* estado: ativo (quando o link é clicado) */
+        a:active {
+            color: #e4f371;
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="https://www.google.com.br">Google</a>|
+    <a href="http://www.tecmundo.com.br">Tecmundo</a>|
+    <a href="http://www.megacurioso.com.br">Mega Curioso</a>
+
+</body>
+</html>
