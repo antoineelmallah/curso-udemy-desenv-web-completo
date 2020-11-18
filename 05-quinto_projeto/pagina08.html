@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamento estático e relativo</title>
+    <style type="text/css">
+
+        body {
+            background: #007fc7;
+        }
+
+        h1 {
+            /* position: static; */
+        }
+
+        p {
+            /* position: static; */
+            width: 300px;
+        }
+
+        #container {
+            background: #fff;
+            width: 800px;
+            margin: 5px auto;
+            padding: 10px;
+            position: relative;
+        }
+
+        /*
+        Quando alteramos a propriedade "position" para "absolute" de um elemento, ele sai do fluxo
+        padrão do documento sem afetar a posição dos outros elementos da página.
+        
+        Também podemos usar propriedades de deslocamento quando a posição é definida como "absolute".
+        O deslocamento do elemento será feito em relação à posição do primeiro elemento ancestral 
+        posicionado (com valor da propriedade position com algum valor diferente de static) que o contém
+        ou em relação aos limites da página (body) caso não exista ancestral posicionado.
+        */
+
+        .absolute {
+            position: absolute;
+            border: 1px solid red;
+            top: 0px;
+            right: 0px;
+        }
+
+        /*
+        Com posicionamento "fixed", a posição do elemento não muda quando é feito scroll da página.
+        O posicionamento fixo fixa o elemento à janela do navegador.
+        */
+
+        .fixed {
+            position: fixed;
+            border: 1px solid red;
+            bottom: 0px;
+            right: 0px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Posicionamentos</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci alias necessitatibus accusamus? Ab, animi provident, possimus aperiam natus porro iusto tempora, architecto doloribus neque omnis rerum ipsa dolores culpa sint.</p>
+        <p class="absolute">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi voluptates voluptate laboriosam aut distinctio delectus et velit nostrum veritatis veniam libero, dolorem earum pariatur labore? Praesentium accusantium tempora perspiciatis similique.</p>
+        <p class="fixed">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi, aliquid quo excepturi enim odio aperiam, at iusto officiis harum, neque necessitatibus nesciunt hic pariatur repellat eum quas ipsam fugit.</p>
+    </div>
+
+</body>
+</html>
