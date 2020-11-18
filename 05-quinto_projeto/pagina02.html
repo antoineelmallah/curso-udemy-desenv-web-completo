@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos flutuantes</title>
+    <style type="text/css">
+
+        /* Quando aplicamos a propriedade float em um elemento, ele passa a flutuar sobre os outros 
+        elementos da página, se sobrepondo à eles. Os elementos flutuantes passam a ser renderizados
+        em um fluxo diferente dos elementos não flutuantes. Eles não vão se sobrepor aos outros elementos
+        se os outros também forem flutuantes. */
+
+        .flutuante {
+            background: blue;
+            border: 1px solid gray;
+            width: 150px;
+            height: 150px;
+            float: left;
+            margin: 10px; /* Podemos adicionar margin para separar os elementos flutuantes. */
+        }
+
+        .flutuante-contida {
+            background: green;
+            border: 1px solid gray;
+            width: 150px;
+            height: 150px;
+            float: right;
+        }
+
+        .flutuante-nao-contida {
+            background: yellow;
+            border: 1px solid gray;
+            width: 150px;
+            height: 150px;
+            float: right;
+        }
+
+        .nao-flutuante {
+            background: red;
+            border: 1px solid gray;
+            width: 1000px;
+            height: 1000px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="flutuante">Flutuante 1</div>
+    <div class="flutuante">Flutuante 2</div>
+    <div class="flutuante">Flutuante 3</div>
+    <div class="flutuante-nao-contida">Não contida flutuante 1</div>
+    <div class="flutuante-nao-contida">Não contida flutuante 2</div>
+    <div class="nao-flutuante">Div não flutuante
+        <div class="flutuante-contida">Contida flutuante 1</div>
+        <div class="flutuante-contida">Contida flutuante 2</div>
+    </div>
+</body>
+</html>
