@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança e especificidade</title>
+    <style type="text/css">
+
+        /* Alteramos a cor da fonte de texto do body e essa formatação foi herdada pelos elementos contidos 
+        nele. Colocamos também uma borda, mas ela NÃO foi propagada aos filhos. 
+        IMPORTANTE: Por padrão, propriedades border e bachground NÃO são herdados. */
+        /* No body, portanto, definimos formatações genéricas. */
+        body {
+            color: red;
+            border: 1px solid blue;
+        }
+
+        /* Regras de precedência: */
+        /* 
+        - A menos que usemos "!important", quando definimos 2 seletores iguais para a mesma página, as 
+        formatações do último irá prevalecer. Devemos evitar o uso de "!important" pois pode deixar o
+        código difícil de ler. */
+        
+        li { /* Essa formatação NÃO será aplicada */
+            color: red;
+        }
+        
+        li { /* Essa formatação será aplicada */
+            color: blue !important;
+        }
+        
+        li { /* Essa formatação NÃO será aplicada */
+            color: green;
+        }
+        
+        /*
+        - A regra de seletores mais específicos têm precedência com relação às mais genéricas. Isso é verdade,
+        independentemente da ordem de declaração.
+        */
+        .especifico { /* Será executado por ser mais especifico, mesmo sendo declarado antes. */
+            color: green;
+        }
+        .generico {
+            color: blue;
+        }
+        .especifico#roxo { /* seletor de id é mais específico do que seletor de classe */
+            color: purple;
+        }
+        .especifico.vermelho {
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="pagina">
+        <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, itaque dignissimos aut mollitia possimus doloribus optio a, voluptate labore totam placeat, sequi quisquam? Aliquam quas distinctio repellat provident. Consequuntur, accusamus!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati omnis optio commodi alias repellendus non consequatur magni, distinctio quasi eligendi ab deleniti nulla nihil sit natus quo? Eum, reprehenderit voluptas!</p>
+    </div>
+
+    <ul>
+        <li>Teste 1</li>
+        <li>Teste 2</li>
+        <li>Teste 3</li>
+        <li>Teste 4</li>
+        <li>Teste 5</li>
+    </ul>
+
+    <div class="generico">
+        <p class="especifico">específico 1</p>
+        <p class="especifico">específico 2</p>
+        <p class="especifico">específico 3</p>
+        <p class="especifico vermelho">específico 4</p>
+        <p class="especifico vermelho" id="roxo">específico 5</p>
+        <p class="especifico">específico 6</p>
+        <p class="especifico">específico 7</p>
+        <p class="especifico">específico 8</p>
+    </div>
+
+</body>
+</html>
