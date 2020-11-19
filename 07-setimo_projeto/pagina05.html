@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de navegação horizontal.</title>
+    <style type="text/css">
+
+        #menu-horizontal {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background: #159cb0 url('images/fundo-horizontal.png') repeat-x;
+            width: 720px;
+            float: left;
+        }
+
+        #menu-horizontal li {
+            float: left;
+        }
+        
+        #menu-horizontal a {
+            display: block;
+            padding: 0 2em;
+            line-height: 2em;
+            text-decoration: none;
+            color: white;
+            /* border: 1px solid blue; */
+            background-image: url('images/divisor.png');
+            background-repeat: repeat-y;
+            background-position: right;
+        }
+
+        #menu-horizontal a:hover {
+            color: #085662;
+            background: #44cade;
+        }
+
+    </style>
+</head>
+<body id="principal">
+
+    <h2>Home</h2>
+    <ul id="menu-horizontal">
+        <li class="home"><a href="pagina05.html">Home</a></li>
+        <li class="sobre"><a href="pagina05-sobre.html">Sobre</a></li>
+        <li class="servicos"><a href="pagina05-servicos.html">Serviços</a></li>
+        <li class="noticias"><a href="pagina05-noticias.html">Noticias</a></li>
+        <li class="contato"><a href="pagina05-contato.html">Contato</a></li>
+    </ul>
+
+</body>
+</html>
