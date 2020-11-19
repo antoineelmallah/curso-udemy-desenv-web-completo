@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de navegação vertical</title>
+    <style type="text/css">
+
+        #menu-vertical {
+            list-style-type: none; /* Remoção do marcador dos itens da lista */
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Os links são elementos inline e por isso suas dimensões são relativas ao conteúdo. Devemos 
+        transformá-los para bloco para ajustar suas alturas e larguras. */
+        #menu-vertical a {
+            width: 200px;
+            height: 40px;
+            display: block;
+            color: #000;
+            text-decoration: none;
+            text-indent: 40px; /* Adiciona um afastamento à esquerda do texto */
+            line-height: 40px; /* Define a altura da linha do texto igual a altura do bloco do elemento <a>.
+                                  Por padrão, a propriedade "line-height" tem o mesmo tamanho da "font-size". */
+            background: url(images/menu.png) no-repeat left bottom;
+        }
+
+        /* Quando passamos o mouse no link, a imagem é alinhada a partir da direita, escondendo a parte 
+        amarelo claro  */
+        #menu-vertical a:hover {
+            background-position-x: right;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Menu vertical</h2>
+    <ul id="menu-vertical">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+
+</body>
+</html>
