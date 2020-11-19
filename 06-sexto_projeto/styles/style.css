@@ -16,19 +16,42 @@ h1 {
     font-size: 2.5em;;
 }
 
-/* Formatação do menu */
+h2 {
+    color: #f7b600;
+}
+
+h3 {
+    color: #565656;
+    background: #ccc;
+    padding: 5px;
+}
+
+/* Formatação dos links - REGRAS MAIS GENERICAS (ACIMA) */
 a {
     text-decoration: none;
 }
 
-a:link, a:visited {
+a:link, a:visited { 
+    color: #f7b600;
+}
+
+a:hover { 
+    text-decoration: underline;
+}
+
+/* Formatação do menu - REGRAS MAIS ESPECIFICAS (ABAIXO) */
+/* A definição da formatação específica para os links dentro do elemento #area-cabecalho sobrescrevem
+a formatação default dos links feita acima. Para isso é importante que esse código esteja abaixo da
+formatação padrão. */
+#area-cabecalho a:link, #area-cabecalho a:visited { /* Formata apenas os links dentro do elemento #area-cabecalho */
     color: white;
     padding: 8px 12px;
 }
 
-a:hover {
+#area-cabecalho a:hover { /* Formata apenas os links dentro do elemento #area-cabecalho */
     color: #f7b600;
     background: white;
+    text-decoration: none; /* para sobrescrever o underline */
 }
 
 /* Layout */
@@ -41,11 +64,7 @@ a:hover {
 #area-principal {
     width: 920px; /* Largura padrão para dispositivos modernos */
     margin: 0px auto;
-    border: 2px solid red;
-}
-
-#area-postagens, #area-menu-lateral {
-    background: orange;
+    padding: 15px;
 }
 
 #area-postagens {
@@ -59,9 +78,29 @@ a:hover {
     background: white;
 }
 
-#area-menu-lateral {
+.data-postagem {
+    font-size: 0.8em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#area-postagens-laterais {
     width: 240px;
     float: right;
+}
+
+.conteudo-lateral {
+    background: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.postagem-lateral {
+    font-size: 0.8em;
+    padding: 5px;
+    border-bottom: 1px dotted gray;
 }
 
 #area-rodape {
