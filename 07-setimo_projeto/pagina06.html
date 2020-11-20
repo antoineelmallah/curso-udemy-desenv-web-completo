@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação com abas.</title>
+    <style type="text/css">
+
+        body {
+            font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        }
+
+        #abas {
+            width: 720px;
+        }
+
+        #abas ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            float: left;
+            width: 720px;
+        }
+
+        #abas li {
+            float: left;
+        }
+
+        #abas a {
+            display: block;
+            line-height: 3em;
+            border: 1px solid brown;
+            min-width: 100px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+            background: orange;
+            text-decoration: none;
+            color: brown;
+        }
+
+        #abas a:hover, #abas a.ativo {
+            background: darkorange;
+            color: white;
+        }
+
+        #abas p {
+            clear: both;
+        }
+
+    </style>
+</head>
+<body id="principal">
+
+    <div id="abas">
+        <ul>
+            <li><a class="ativo" href="pagina06.html">Home</a></li>
+            <li><a href="pagina06-sobre.html">Sobre</a></li>
+            <li><a href="pagina06-servicos.html">Serviços</a></li>
+            <li><a href="pagina06-noticias.html">Notícias</a></li>
+            <li><a href="pagina06-contato.html">Contato</a></li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nemo officiis dicta repellat reiciendis porro odit, aliquid quisquam quaerat repudiandae iure labore quasi fugiat reprehenderit earum sed. Sint, a? Omnis!</p>
+    </div>
+
+</body>
+</html>
