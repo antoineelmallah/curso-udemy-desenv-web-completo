@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout líquido ou fluido.</title>
+    <style type="text/css">
+
+        /* 
+        No layout liquido, quando alteramos o tamanho da janela do browser, seu conteúdo é esticado
+        ou encolhido, mantendo a proporcionalidade, até certo tamanho mínimo. Isso é feito usando 
+        porcentagem no lugar de valores fixos para definir o tamanho dos elementos. 
+        
+        Layout liquido não é o mesmo que layout responsivo. O último se adapta ao tamanho da tela, ou 
+        seja, o layout se modificaria de acordo com a largura da tela. 
+        */
+
+        body {
+            font-family: 'Trebuchet MS', Helvetica, sans-serif;
+            background: #f2f2f2;
+        }
+
+        #container {
+            width: 90%; /*720px (antes)*/
+            min-width: 720px; /* Para limitar a largura minima e evitar bagunçar o layout. */
+            max-width: 960px; /* Para limitar a largura máxima. */
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        #marca {
+            height: 100px;
+            background: #9e9e9e;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        /*
+        Usamos regra de 3 para determinar os novos valores, em porcentagem.
+
+        largura de #conteudo (lc) = 520px
+        largura de #navegacao (ln) = 180px
+
+        lc + ln = 700px
+
+        Em porcentagens:
+        lc = (520 * 100) / 700 ~= 75
+        ln = (180 * 100) / 700 ~= 25
+
+        Diminuimos um pouco devido aos espaçamentos
+        lc = 75%
+        ln = 24%
+
+        */
+
+        #conteudo {
+            width: 75%; /*520px (antes)*/
+            float: right;
+        }
+
+        /*
+        Cálculo das larguras de #conteudo-principal e #conteudo-secundario:
+
+        Largura de #conteudo-principal (lp) = 320px
+        Largura de #conteudo-secundario (ls) = 180px
+
+        lp + ls = 500px
+
+        lp' = (320 * 100) / 500 = 64%
+        ls' = (180 * 100) / 500 = 36%
+
+        Ajustando:
+
+        lp' = 64%
+        ls' = 34%
+        */
+
+        #conteudo-principal {
+            border: 1px solid red;
+            float: left;
+            width: 64%; /*320px (antes)*/
+        }
+
+        #conteudo-secundario {
+            border: 1px solid red;
+            float: right;
+            width: 34%; /*180px (antes)*/
+            background: #d1d1d1;
+        }
+
+        #conteudo-secundario > * {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #navegacao {
+            width: 24%; /* 180px (antes) */
+            float: left;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background: #d1d1d1;
+        }
+
+        #navegacao > ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #navegacao li a {
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            color: black;
+        }
+
+        #navegacao li a:hover {
+            background: darkgray;
+            color: white;
+        }
+
+        #rodape {
+            clear: both;
+            background: #c4c4c4;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div id="marca">Marca</div>
+        <div id="conteudo">
+            <div id="conteudo-principal">
+                <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae reiciendis voluptate suscipit temporibus amet minima ullam quidem, excepturi, nisi corporis mollitia vero explicabo reprehenderit libero ad voluptatem corrupti facilis repellendus.</p>
+            </div>
+            <div id="conteudo-secundario">
+                <h2>Conteúdo secundário</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae reiciendis voluptate suscipit temporibus amet minima ullam quidem, excepturi, nisi corporis mollitia vero explicabo reprehenderit libero ad voluptatem corrupti facilis repellendus.</p>
+            </div>
+        </div>
+        <div id="navegacao">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Clientes</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        <div id="rodape">Rodapé</div>
+    </div>
+
+</body>
+</html>
