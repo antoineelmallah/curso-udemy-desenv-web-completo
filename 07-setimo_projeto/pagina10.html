@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coluna falsa.</title>
+    <style type="text/css">
+
+        /*
+        Não conseguimos aplicar essa técnica em layouts liquidos.
+        */
+
+        body {
+            font-family: 'Trebuchet MS', Helvetica, sans-serif;
+            background: #f2f2f2;
+        }
+
+        #container {
+            border: 1px solid red;
+            width: 960px;
+            min-width: 720px;
+            max-width: 1280px;
+            margin: 0 auto;
+            background: #fff url(images/coluna.png) repeat-y left top;
+        }
+
+        #marca {
+            height: 200px;
+            background: #225992 url(images/cabecalho2.jpg) no-repeat center;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        #conteudo {
+            width: 75%;
+            float: right;
+        }
+
+        #conteudo-principal {
+            float: left;
+            width: 64%;
+        }
+/*
+        #imagem {
+            width: 100%;
+            overflow: hidden;  // esconde parte da imagem que exceder a div 
+        }
+*/
+        img.img-noticia {
+            width: 96%;
+            padding: 2%;
+            max-width: 500px;
+        }
+
+        #conteudo-secundario {
+            float: right;
+            width: 34%;
+            background: #d1d1d1;
+        }
+
+        #conteudo-secundario > * {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #navegacao {
+            width: 23%;
+            float: left;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            /*background: #d1d1d1;*/
+        }
+
+        #navegacao > ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #navegacao li a {
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            color: black;
+        }
+
+        #navegacao li a:hover {
+            background: darkgray;
+            color: white;
+        }
+
+        #rodape {
+            clear: both;
+            background: #c4c4c4;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div id="marca">Marca</div>
+        <div id="conteudo">
+            <div id="conteudo-principal">
+                <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                <!--div id="imagem"-->
+                <img class="img-noticia" src="images/natureza.jpg">
+                <!--/div-->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae reiciendis voluptate suscipit temporibus amet minima ullam quidem, excepturi, nisi corporis mollitia vero explicabo reprehenderit libero ad voluptatem corrupti facilis repellendus.</p>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti exercitationem unde voluptates commodi eius non consequatur veniam vitae, ex magnam perspiciatis at, deserunt perferendis voluptatem soluta, quaerat itaque aliquam ratione.</p>
+            </div>
+            <div id="conteudo-secundario">
+                <h2>Conteúdo secundário</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae reiciendis voluptate suscipit temporibus amet minima ullam quidem, excepturi, nisi corporis mollitia vero explicabo reprehenderit libero ad voluptatem corrupti facilis repellendus.</p>
+            </div>
+        </div>
+        <div id="navegacao">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Clientes</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        <div id="rodape">Rodapé</div>
+    </div>
+
+</body>
+</html>
