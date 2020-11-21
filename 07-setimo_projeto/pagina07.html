@@ -6,11 +6,109 @@
     <title>Layout de largura fixa.</title>
     <style type="text/css">
 
+        /* No layout fixo, quando alteramos o tamanho da janela do browser, o tamanho do layout mantem seu
+        tamanho. */
+
+        body {
+            font-family: 'Trebuchet MS', Helvetica, sans-serif;
+            background: #f2f2f2;
+        }
+
+        #container {
+            width: 720px;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        #marca {
+            height: 100px;
+            background: #9e9e9e;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #conteudo {
+            width: 520px;
+            float: right;
+        }
+
+        #conteudo-principal {
+            float: left;
+            width: 320px;
+        }
+
+        #conteudo-secundario {
+            float: right;
+            width: 180px;
+            background: #d1d1d1;
+        }
+
+        #conteudo-secundario > * {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #navegacao {
+            width: 180px;
+            float: left;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background: #d1d1d1;
+        }
+
+        #navegacao > ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #navegacao li a {
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            color: black;
+        }
+
+        #navegacao li a:hover {
+            background: darkgray;
+            color: white;
+        }
+
+        #rodape {
+            clear: both;
+            background: #c4c4c4;
+            padding: 5px;
+        }
 
     </style>
 </head>
 <body>
 
+    <div id="container">
+        <div id="marca">Marca</div>
+        <div id="conteudo">
+            <div id="conteudo-principal">
+                <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae reiciendis voluptate suscipit temporibus amet minima ullam quidem, excepturi, nisi corporis mollitia vero explicabo reprehenderit libero ad voluptatem corrupti facilis repellendus.</p>
+            </div>
+            <div id="conteudo-secundario">
+                <h2>Conteúdo secundário</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae reiciendis voluptate suscipit temporibus amet minima ullam quidem, excepturi, nisi corporis mollitia vero explicabo reprehenderit libero ad voluptatem corrupti facilis repellendus.</p>
+            </div>
+        </div>
+        <div id="navegacao">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Clientes</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        <div id="rodape">Rodapé</div>
+    </div>
 
 </body>
 </html>
