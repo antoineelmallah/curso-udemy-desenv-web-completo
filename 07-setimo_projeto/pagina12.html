@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilizar formulários.</title>
+    <style type="text/css">
+
+        body {
+            font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        }
+
+        fieldset {
+            margin: 1em 0;
+            padding: 1em;
+            border: 1px solid #ccc;
+            background: #f8f8f8;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: block; /* Não funcionará se o input estiver dentro do elemento label */
+            cursor: pointer; /* Para indicar que o usuário pode clicar no nome. */
+        }
+
+        input[type=text] { /* O seletor de atributo é mais novo. Por isso, não existe suporte 
+                              em browsers mais antigos. Podemos usar classes para ter uma maior
+                              compatibilidade. */
+            width: 20em;
+        }
+
+        input.radio, input.chackbox, input.submit {
+            width: auto;
+        }
+
+        .radio {
+            margin-right: 1em;
+        }
+
+        textarea {
+            width: 20em;
+            height: 10em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Estilizar formulários</h2>
+
+    <form>
+        <!-- fieldset é usado para agrupar dados semelhantes. -->
+        <fieldset>
+            <!-- legend é usado para adicionar um titulo para o agrupamento -->
+            <legend>Detalhes de contato</legend>
+            <div>
+                <!-- Rotulo para as caixas de texto. A propriedade "for" deve conter o id do input ao
+                qual ela está associada. É um recurso que facilita a acessibilidade. Graças à propriedade
+                "for", se clicarmos em cima do "Nome:", a caixa de texto ganhará foco. -->
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <div>
+                <label for="url">URL:</label>
+                <input type="text" name="url" id="url">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Comentários</legend>
+            <div>
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Lembrar de mim</legend>
+            <div>
+                <!-- Podemos também colocar o input dentro do elemento label. Dessa forma, não precisamos
+                especificar a propriedade "for" e o efeito será o mesmo. -->
+                <label>
+                    <input class="radio" type="radio" name="lembrar" id="sim">Sim
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input class="radio" type="radio" name="lembrar" id="nao">Não
+                </label>
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+</html>
