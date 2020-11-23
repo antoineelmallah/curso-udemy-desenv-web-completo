@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilizar formulários 2.</title>
+    <style type="text/css">
+
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background: #643d87 url(images/fundo.jpg) no-repeat top center;
+        }
+
+        #container {
+            width: 400px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.3); /* Transparência de 0.3 */
+            border-radius: 10px;
+            margin: 0 auto;
+            margin-top: 120px;
+            text-align: center; /* A propriedade text-align controla o alinhamento de elementos inline
+                                   dentro de elementos de bloco. Não tem efeito sobre o alinhamento de
+                                   elementos de bloco. Apenas seu conteúdo inline. */
+        }
+
+        #container img {
+            width: 120px;
+            height: 120px;
+            margin-top: -60px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            height: 40px;
+            width: 80%;
+            font-size: 18px;
+            margin-bottom: 10px;
+            background-color: #fff;
+            padding-left: 40px;
+            border: none;
+            background-repeat: no-repeat;
+            background-position: 10px; /* Ajustando a posição do */
+        }
+
+        input.email {
+            background-image: url(images/icone-usuario.png);
+        }
+
+        input.password {
+            background-image: url(images/icone-cadeado.png);
+        }
+
+        input.submit {
+            color: #fff;
+            background: #f79300; /* background sólido para maior compatibilidade. */
+            border: 2px solid #db7d00;
+            padding: 5px 20px;
+            height: 45px;
+            width: 90%;
+
+            /* Aplicar gradiente no fundo do botão. Não funciona com browsers mais antigos. Assim,
+            devemos definir uma cor sólida para maior compatibilidade, como feito acima. 
+            Precisamos adicionar outros prefixos CSS para manter a compatibilidade com outros 
+            browsers.*/
+            background: -webkit-linear-gradient(to bottom, #faa600, #f68a00);
+            background: -moz-linear-gradient(to bottom, #faa600, #f68a00);
+            background: -o-linear-gradient(to bottom, #faa600, #f68a00);
+            background: linear-gradient(to bottom, #faa600, #f68a00);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <img src="images/perfil.png">
+
+        <form>
+            <div>
+                <input class="email" type="text" name="email" id="email" placeholder="Digite seu e-mail">
+            </div>
+            <div>
+                <input class="password" type="password" name="senha" id="senha" placeholder="Digite sua senha">
+            </div>
+            <div>
+                <input class="submit" type="submit" value="Logar">
+            </div>
+        </form>
+
+    </div>
+
+</body>
+</html>
